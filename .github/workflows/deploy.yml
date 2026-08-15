@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -euo pipefail
+            cd ${{ secrets.DEPLOY_PATH }}
+            git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' '${{ secrets.GITHUB_TOKEN }}' | base64 -w0)" pull origin main
+            docker compose up -d --build --force-recreate
+            docker image prune -f
+
+            STATUS=$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8089/)
+            if [ "$STATUS" != "200" ]; then
+              echo "site returned HTTP $STATUS after deploy"
+              exit 1
+            fi
+            echo "site reachable (HTTP $STATUS)"
