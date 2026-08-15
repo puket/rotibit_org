@@ -19,6 +19,7 @@ jobs:
           script: |
             set -euo pipefail
             cd ${{ secrets.DEPLOY_PATH }}
+            git config --global --add safe.directory "$(pwd)"
             git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' '${{ secrets.GITHUB_TOKEN }}' | base64 -w0)" pull origin main
             docker compose up -d --build --force-recreate
             docker image prune -f
