@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประเภทคริปโต - RotiBit</title>
+    <link rel="icon" type="image/png" href="assets/ico/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333333;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .text-brand-blue {
+            color: #1b1464;
+            font-weight: 700;
+        }
+
+        .bg-primary h1 {
+            color: white !important;
+        }
+
+        .crypto-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .crypto-card:hover {
+            box-shadow: 0 4px 12px rgba(27, 20, 100, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .crypto-card h3 {
+            color: #1b1464;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .crypto-icon {
+            font-size: 2.5rem;
+            color: #f64548;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .info-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #1b1464;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-brand-blue" href="index.html" id="topAnchor"><img src="assets/img/logo.png" alt="RotiBit - แหล่งเรียนรู้คริปโตสำหรับคนไทย" height="70"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crypto101.html">Crypto 101</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutorials.html">คู่มือการใช้งาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disclaimer.html">ข้อสงวนสิทธิ์</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 mb-3">ประเภทคริปโต</h1>
+            <p class="lead">รู้จักคริปโตชนิดต่างๆ และความแตกต่างของแต่ละประเภท</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <p class="lead">นอกจาก Bitcoin และ Ethereum ยังมีคริปโตอื่นๆ อีกมากมาย แต่ละชนิดมีวัตถุประสงค์และคุณสมบัติที่แตกต่างกัน</p>
+
+                    <!-- Bitcoin -->
+                    <div class="crypto-card">
+                        <i class="fab fa-bitcoin crypto-icon"></i>
+                        <h3>Bitcoin (BTC)</h3>
+                        <p><strong>ลักษณะ:</strong> คริปโตตัวแรกและมีมูลค่ามากที่สุด สร้างขึ้นปี 2009</p>
+                        <p><strong>วัตถุประสงค์:</strong> เป็นเงินดิจิทัลเพื่อแทนที่เงินฟิแอต (Fiat Currency) และธนาคาร</p>
+                        <p><strong>ปริมาณ:</strong> มีเพียง 21 ล้านเหรียญเท่านั้น ทำให้หายากและมีค่า</p>
+                        <div class="info-box">
+                            <strong>💡 สำหรับมือใหม่:</strong> Bitcoin เป็นตัวเลือกแรกสำหรับผู้ที่เริ่มต้น เพราะเป็นที่รู้จักมากที่สุดและมีสภาพคล่องสูง
+                        </div>
+                    </div>
+
+                    <!-- Ethereum -->
+                    <div class="crypto-card">
+                        <i class="fab fa-ethereum crypto-icon"></i>
+                        <h3>Ethereum (ETH)</h3>
+                        <p><strong>ลักษณะ:</strong> บล็อกเชนที่ให้สร้าง Smart Contracts และ Decentralized Applications (DApps)</p>
+                        <p><strong>วัตถุประสงค์:</strong> ไม่เพียงแค่เงินดิจิทัล แต่เป็นแพลตฟอร์มสำหรับสร้างสัญญาอัตโนมัติ</p>
+                        <p><strong>ความนิยม:</strong> ใช้ในการสร้าง DeFi, NFT, Token ต่างๆ</p>
+                        <div class="info-box">
+                            <strong>💡 สำหรับมือใหม่:</strong> Ethereum นิยมใกล้เคียงกับ Bitcoin และใช้งานได้หลากหลายมากกว่า
+                        </div>
+                    </div>
+
+                    <!-- Altcoins -->
+                    <div class="crypto-card">
+                        <i class="fas fa-coins crypto-icon"></i>
+                        <h3>Altcoins (คริปโตอื่นๆ)</h3>
+                        <p><strong>นิยาม:</strong> คริปโตทั้งหมดที่ไม่ใช่ Bitcoin และ Ethereum</p>
+                        <p><strong>ตัวอย่าง:</strong></p>
+                        <ul>
+                            <li><strong>Litecoin (LTC)</strong> - เร็วกว่า Bitcoin, ค่าธรรมเนียมต่ำกว่า</li>
+                            <li><strong>Ripple (XRP)</strong> - เพื่อการโอนเงินข้ามประเทศ</li>
+                            <li><strong>Cardano (ADA)</strong> - บล็อกเชนรุ่นใหม่, ออกแบบอย่างรอบคอบ</li>
+                            <li><strong>Solana (SOL)</strong> - ความเร็วสูง, ค่าธรรมเนียมต่ำ</li>
+                        </ul>
+                        <div class="info-box">
+                            <strong>⚠️ ระวัง:</strong> Altcoins มีความผันผวนสูงกว่า Bitcoin และ Ethereum มาก ความเสี่ยงเพิ่มขึ้นตามสัดส่วน
+                        </div>
+                    </div>
+
+                    <!-- Stablecoins -->
+                    <div class="crypto-card">
+                        <i class="fas fa-balance-scale crypto-icon"></i>
+                        <h3>Stablecoins (คริปโตเสถียร)</h3>
+                        <p><strong>ลักษณะ:</strong> คริปโตที่มีมูลค่าเชื่อมกับสินทรัพย์เสถียร (มักเป็นดอลล่าร์ USA)</p>
+                        <p><strong>ตัวอย่าง:</strong></p>
+                        <ul>
+                            <li><strong>Tether (USDT)</strong> - 1 USDT = 1 USD ประมาณ</li>
+                            <li><strong>USD Coin (USDC)</strong> - สนับสนุนโดย Coinbase</li>
+                            <li><strong>Binance USD (BUSD)</strong> - สนับสนุนโดย Binance</li>
+                        </ul>
+                        <p><strong>วัตถุประสงค์:</strong> ใช้สำหรับการซื้อขาย ลดความเสี่ยงจากความผันผวน</p>
+                        <div class="info-box">
+                            <strong>💡 สำหรับมือใหม่:</strong> Stablecoin ใช้เมื่อต้องการหยุดการซื้อขายหรือรักษาค่าเงินให้คงที่ มีความเสี่ยงต่ำกว่า
+                        </div>
+                    </div>
+
+                    <!-- Tokens -->
+                    <div class="crypto-card">
+                        <i class="fas fa-ticket-alt crypto-icon"></i>
+                        <h3>Tokens (โทเคน)</h3>
+                        <p><strong>นิยาม:</strong> ดิจิทัล asset ที่สร้างขึ้นบนบล็อกเชน (โดยปกติคือ Ethereum)</p>
+                        <p><strong>ชนิด:</strong></p>
+                        <ul>
+                            <li><strong>Utility Tokens</strong> - ใช้สำหรับการทำธุรกรรมในแอป</li>
+                            <li><strong>Governance Tokens</strong> - ให้สิทธิ์ในการโหวต</li>
+                            <li><strong>Payment Tokens</strong> - ใช้สำหรับชำระเงิน</li>
+                        </ul>
+                        <div class="info-box">
+                            <strong>⚠️ ระวัง:</strong> Token มีความเสี่ยงสูงมากที่สุด โครงการหลายอันล้มเหลว ศึกษาให้ดีก่อนซื้อ
+                        </div>
+                    </div>
+
+                    <!-- Comparison Table -->
+                    <div class="info-box">
+                        <h4>📊 การเปรียบเทียบประเภทคริปโต</h4>
+                        <table class="table table-sm mt-3">
+                            <thead>
+                                <tr>
+                                    <th>ชนิด</th>
+                                    <th>ความปลอดภัย</th>
+                                    <th>ความผันผวน</th>
+                                    <th>สภาพคล่อง</th>
+                                    <th>สำหรับมือใหม่</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Bitcoin</strong></td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>✅ ดี</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ethereum</strong></td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>✅ ดี</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Altcoins</strong></td>
+                                    <td>⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>⚠️ เสี่ยง</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Stablecoins</strong></td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>⭐</td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>✅ ปลอดภัย</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tokens</strong></td>
+                                    <td>⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐</td>
+                                    <td>❌ เสี่ยงสูง</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Recommendation -->
+                    <div class="alert alert-info">
+                        <h5 class="alert-heading">📌 คำแนะนำสำหรับมือใหม่</h5>
+                        <ul class="mb-0">
+                            <li>ควรเริ่มด้วย <strong>Bitcoin หรือ Ethereum</strong> เพื่อทำความเข้าใจตลาด</li>
+                            <li>ห้ามรีบแรงใจลงทุนใน Altcoins หรือ Tokens ทันที</li>
+                            <li>ใช้ Stablecoin เมื่อต้องการเก็บค่าเงินไว้ชั่วคราว</li>
+                            <li>ศึกษาวิจัยคริปโตแต่ละตัวก่อนตัดสินใจ</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 border-top">
+        <div class="container text-center">
+            <h5 class="text-brand-blue mb-3">RotiBit</h5>
+
+            <div class="footer-disclaimer mx-auto mt-3 mb-3" style="max-width: 800px;">
+                <strong>คำเตือน:</strong> คริปโทเคอร์เรนซีและโทเคนดิจิทัลมีความเสี่ยงสูง ท่านอาจสูญเสียเงินลงทุนได้ทั้งจำนวน โปรดศึกษาและลงทุนให้เหมาะสมกับระดับความเสี่ยงที่ยอมรับได้
+            </div>
+
+            <a href="#topAnchor" style="color: #1b1464; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 1rem;">
+                <i class="fas fa-arrow-up"></i> กลับไปด้านบน
+            </a>
+
+            <p class="mb-0 text-muted small">&copy; 2026 RotiBit. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

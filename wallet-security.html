@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประเภทกระเป๋า & ความปลอดภัย - RotiBit</title>
+    <link rel="icon" type="image/png" href="assets/ico/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333333;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .text-brand-blue {
+            color: #1b1464;
+            font-weight: 700;
+        }
+
+        .bg-primary h1 {
+            color: white !important;
+        }
+
+        .wallet-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .wallet-card:hover {
+            box-shadow: 0 4px 12px rgba(27, 20, 100, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .wallet-card h3 {
+            color: #1b1464;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .wallet-icon {
+            font-size: 2.5rem;
+            color: #f64548;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .pros {
+            background-color: #d4edda;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #28a745;
+        }
+
+        .cons {
+            background-color: #f8d7da;
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid #dc3545;
+        }
+
+        .info-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #1b1464;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-brand-blue" href="index.html" id="topAnchor"><img src="assets/img/logo.png" alt="RotiBit - แหล่งเรียนรู้คริปโตสำหรับคนไทย" height="70"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crypto101.html">Crypto 101</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutorials.html">คู่มือการใช้งาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disclaimer.html">ข้อสงวนสิทธิ์</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 mb-3">ประเภทกระเป๋า (Wallets)</h1>
+            <p class="lead">วิธีการเก็บรักษาคริปโตให้ปลอดภัย</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <p class="lead">กระเป๋า (Wallet) คือที่เก็บคริปโตของคุณ การเลือกกระเป๋าที่เหมาะสมเป็นเรื่องสำคัญต่อความปลอดภัย</p>
+
+                    <!-- Hot Wallet -->
+                    <div class="wallet-card">
+                        <i class="fas fa-fire crypto-icon"></i>
+                        <h3>Hot Wallet (กระเป๋าอุ่น)</h3>
+                        <p><strong>นิยาม:</strong> กระเป๋าที่เชื่อมต่อกับอินเทอร์เน็ตตลอดเวลา</p>
+
+                        <p><strong>ตัวอย่าง:</strong></p>
+                        <ul>
+                            <li>Exchange Wallet (Binance, Coinbase) - กระเป๋าที่แพลตฟอร์มจัดเตรียม</li>
+                            <li>Mobile Wallet (Trust Wallet, MetaMask) - แอปบนมือถือ</li>
+                            <li>Web Wallet - เว็บไซต์</li>
+                        </ul>
+
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5>✅ ข้อดี</h5>
+                                <ul class="mb-0">
+                                    <li>สะดวก ใช้งานง่าย</li>
+                                    <li>ทำธุรกรรมได้ทันที</li>
+                                    <li>รองรับหลายคริปโต</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5>❌ ข้อเสีย</h5>
+                                <ul class="mb-0">
+                                    <li>มีความเสี่ยง (แฮก)</li>
+                                    <li>ไม่ควรเก็บจำนวนมาก</li>
+                                    <li>ต้องพึ่งเซิร์ฟเวอร์</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <strong>💡 ใช้ได้กับ:</strong> การซื้อขาย เงินจำนวนน้อย (ทำงาน)
+                        </div>
+                    </div>
+
+                    <!-- Cold Wallet -->
+                    <div class="wallet-card">
+                        <i class="fas fa-snowflake crypto-icon"></i>
+                        <h3>Cold Wallet (กระเป๋าเย็น)</h3>
+                        <p><strong>นิยาม:</strong> กระเป๋าที่ไม่เชื่อมต่ออินเทอร์เน็ต</p>
+
+                        <p><strong>ตัวอย่าง:</strong></p>
+                        <ul>
+                            <li>Hardware Wallet (Ledger, Trezor) - อุปกรณ์โลหะเล็กๆ</li>
+                            <li>Paper Wallet - พิมพ์ private key ลงกระดาษ</li>
+                            <li>Air-gapped Device - คอมพิวเตอร์ที่ตัดการเชื่อมต่ออินเทอร์เน็ต</li>
+                        </ul>
+
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h5>✅ ข้อดี</h5>
+                                <ul class="mb-0">
+                                    <li>ปลอดภัยที่สุด</li>
+                                    <li>ไม่เสี่ยงต่อแฮก</li>
+                                    <li>เก็บได้นาน</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h5>❌ ข้อเสีย</h5>
+                                <ul class="mb-0">
+                                    <li>ใช้งานซับซ้อน</li>
+                                    <li>ต้องซื้ออุปกรณ์</li>
+                                    <li>ทำธุรกรรมช้า</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <strong>💡 ใช้ได้กับ:</strong> เก็บเงินระยะยาว (เหรียญจำนวนมาก)
+                        </div>
+                    </div>
+
+                    <!-- Custody -->
+                    <div class="wallet-card">
+                        <i class="fas fa-bank crypto-icon"></i>
+                        <h3>Self-Custody vs Exchange Custody</h3>
+
+                        <h5 class="mt-3">Self-Custody (เก็บเอง)</h5>
+                        <p>คุณมี Private Key และควบคุมคริปโตทั้งหมด</p>
+                        <ul>
+                            <li>✅ ควบคุมคริปโตจริงๆ</li>
+                            <li>⚠️ ความรับผิดชอบเต็มที่ (หากลืมรหัส = หลุดตลอดไป)</li>
+                        </ul>
+
+                        <h5 class="mt-3">Exchange Custody (เก็บไว้ที่แพลตฟอร์ม)</h5>
+                        <p>แพลตฟอร์มเก็บคริปโตให้ คุณเพียงใช้ username & password</p>
+                        <ul>
+                            <li>✅ สะดวก ทำธุรกรรมเร็ว</li>
+                            <li>⚠️ เสี่ยงถ้าแพลตฟอร์มล้มเหลว</li>
+                        </ul>
+
+                        <div class="info-box">
+                            <strong>💡 คำแนะนำ:</strong> ใช้ทั้งสองวิธี - เก็บสัดส่วนใหญ่ใน Cold Wallet (ปลอดภัย) และบางส่วนใน Hot Wallet (สะดวก)
+                        </div>
+                    </div>
+
+                    <!-- Security Tips -->
+                    <div class="alert alert-warning">
+                        <h5 class="alert-heading">🔒 เคล็ดลับความปลอดภัยกระเป๋า</h5>
+                        <ul class="mb-0">
+                            <li>✅ <strong>Backup Private Key:</strong> เก็บสำเนา Private Key ไว้ที่ปลอดภัย (Paper หรือ USB)</li>
+                            <li>✅ <strong>Use Strong Password:</strong> รหัสผ่านต้องยาว (16+ ตัว) และซับซ้อน</li>
+                            <li>✅ <strong>Enable 2FA:</strong> เปิด Two-Factor Authentication บน Wallet และ Exchange</li>
+                            <li>✅ <strong>Verify Address:</strong> ตรวจสอบ Address ก่อนส่งเงิน (คัดลอกผิดวิธี)</li>
+                            <li>❌ <strong>Never Share Private Key:</strong> ห้ามบอกให้ใครรู้ เด็ดขาด!</li>
+                            <li>❌ <strong>Don't Use Public WiFi:</strong> ห้ามเข้า Wallet บน WiFi สาธารณะ</li>
+                        </ul>
+                    </div>
+
+                    <!-- Comparison -->
+                    <div class="info-box">
+                        <h4>📊 เปรียบเทียบประเภท Wallet</h4>
+                        <table class="table table-sm mt-3">
+                            <thead>
+                                <tr>
+                                    <th>ชนิด</th>
+                                    <th>ความปลอดภัย</th>
+                                    <th>ความสะดวก</th>
+                                    <th>ราคา</th>
+                                    <th>ใช้สำหรับ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Exchange Wallet</strong></td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>ฟรี</td>
+                                    <td>ซื้อขาย</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mobile Wallet</strong></td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>⭐⭐⭐⭐</td>
+                                    <td>ฟรี</td>
+                                    <td>ใช้งานทั่วไป</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hardware Wallet</strong></td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐⭐⭐</td>
+                                    <td>2,000-5,000 บาท</td>
+                                    <td>เก็บยาวนาน</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Paper Wallet</strong></td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>⭐</td>
+                                    <td>ฟรี</td>
+                                    <td>เก็บยาวนาน</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 border-top">
+        <div class="container text-center">
+            <h5 class="text-brand-blue mb-3">RotiBit</h5>
+
+            <div class="footer-disclaimer mx-auto mt-3 mb-3" style="max-width: 800px;">
+                <strong>คำเตือน:</strong> คริปโทเคอร์เรนซีและโทเคนดิจิทัลมีความเสี่ยงสูง ท่านอาจสูญเสียเงินลงทุนได้ทั้งจำนวน โปรดศึกษาและลงทุนให้เหมาะสมกับระดับความเสี่ยงที่ยอมรับได้
+            </div>
+
+            <a href="#topAnchor" style="color: #1b1464; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 1rem;">
+                <i class="fas fa-arrow-up"></i> กลับไปด้านบน
+            </a>
+
+            <p class="mb-0 text-muted small">&copy; 2026 RotiBit. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

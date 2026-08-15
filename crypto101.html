@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto 101 - RotiBit</title>
+    <link rel="icon" type="image/png" href="assets/ico/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Prompt สำหรับภาษาไทยให้อ่านง่ายและดูทันสมัย -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333333;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .text-brand-blue {
+            color: #1b1464;
+            font-weight: 700;
+        }
+
+        .bg-primary h1 {
+            color: white !important;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #f64548;
+        }
+
+        .sidebar h5 {
+            color: #1b1464;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar ul li a {
+            color: #1b1464;
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.8rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #e8edf5;
+            color: #f64548;
+        }
+
+        .next-lesson {
+            background-color: #f0f4ff;
+            border-left: 4px solid #1b1464;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .next-lesson a {
+            color: white;
+            background-color: #1b1464;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .next-lesson a:hover {
+            background-color: #f64548;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-lesson {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .card-lesson:hover {
+            box-shadow: 0 4px 12px rgba(27, 20, 100, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .card-lesson h3 {
+            color: #1b1464;
+            margin-bottom: 1.5rem;
+            font-size: 1.35rem;
+        }
+
+        .term-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .term-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .term-list li:last-child {
+            border-bottom: none;
+        }
+
+        .term-list strong {
+            color: #1b1464;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .term-list span {
+            color: #666666;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background-color: #f0f4ff;
+            border-left: 4px solid #f64548;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-brand-blue" href="index.html" id="topAnchor"><img src="assets/img/logo.png" alt="RotiBit - แหล่งเรียนรู้คริปโตสำหรับคนไทย" height="70"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="crypto101.html">Crypto 101</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutorials.html">คู่มือการใช้งาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disclaimer.html">ข้อสงวนสิทธิ์</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 mb-3">Crypto 101: พื้นฐานที่ต้องรู้</h1>
+            <p class="lead">เรียนรู้พื้นฐานเกี่ยวกับคริปโตเคอร์เรนซีและบล็อกเชนด้วยภาษาที่เข้าใจง่าย</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <!-- 1. คริปโตคืออะไร -->
+                    <div class="card-lesson">
+                        <h3>1. คริปโตเคอร์เรนซีคืออะไร?</h3>
+                        <p>
+                            <strong>คริปโตเคอร์เรนซี (Cryptocurrency)</strong> เป็นเงินดิจิทัลที่อยู่บนเทคโนโลยีบล็อกเชน ซึ่งไม่มีธนาคารหรือหน่วยงานกลางในการจัดการ แต่ถูกควบคุมผ่านระบบคณิตศาสตร์และการตรวจสอบจากคน ๆ มากมายทั่วโลก
+                        </p>
+                        <p>
+                            ตัวอย่างเช่น <strong>Bitcoin</strong> คือคริปโตเคอร์เรนซีตัวแรกและมีมูลค่าสูงสุด ซึ่งสร้างขึ้นในปี 2552 (ค.ศ. 2009) เพื่อให้คนสามารถส่งเงินถึงกันได้โดยไม่ต้องผ่านธนาคาร
+                        </p>
+                        <div class="highlight-box">
+                            <strong>💡 ข้อสำคัญ:</strong> คริปโตไม่ใช่สินค้าทำนาย มันเป็นสินทรัพย์ดิจิทัลที่มีความเสี่ยงสูง ไม่ควรลงทุนเกินกว่าที่สามารถเสียได้
+                        </div>
+                    </div>
+
+                    <!-- 2. บล็อกเชนคืออะไร -->
+                    <div class="card-lesson">
+                        <h3>2. บล็อกเชน (Blockchain) คืออะไร?</h3>
+                        <p>
+                            <strong>บล็อกเชน</strong> เป็นเทคโนโลยีที่ใช้เก็บบันทึกการทำธุรกรรมแบบกระจายศูนย์ (Decentralized Ledger) โดยแต่ละ "บล็อก" ของข้อมูลจะเชื่อมโยงกันด้วยรหัสเข้ารหัส (Cryptography) ทำให้ไม่สามารถปลอมแปลงได้
+                        </p>
+                        <p>
+                            <strong>วิธีการทำงาน:</strong>
+                        </p>
+                        <ol>
+                            <li>ผู้ใช้ส่งข้อมูลการทำธุรกรรมไปยังเครือข่าย</li>
+                            <li>คนในเครือข่าย (เรียกว่า "Miners" หรือ "Validators") ตรวจสอบและยืนยันความถูกต้องของธุรกรรม</li>
+                            <li>ธุรกรรมจะถูกนำเข้าไปยังบล็อกใหม่</li>
+                            <li>บล็อกนี้จะเชื่อมโยงกับบล็อกก่อนหน้าด้วยรหัสเข้ารหัส</li>
+                            <li>บันทึกนี้ถูกเก็บไว้ในเครือข่ายทั้งหมด และไม่สามารถเปลี่ยนแปลงได้</li>
+                        </ol>
+                        <div class="highlight-box">
+                            <strong>🔒 ประโยชน์:</strong> ความโปร่งใส, ความปลอดภัย, ไม่สามารถปลอมแปลงได้
+                        </div>
+                    </div>
+
+                    <!-- 3. คำศัพท์พื้นฐาน -->
+                    <div class="card-lesson">
+                        <h3>3. คำศัพท์พื้นฐานที่ต้องรู้</h3>
+                        <ul class="term-list">
+                            <li>
+                                <strong>Bitcoin (BTC)</strong>
+                                <span>คริปโตเคอร์เรนซีตัวแรก สร้างขึ้นเพื่อแทนที่เงินฟิแอต (Fiat Currency) และธนาคาร</span>
+                            </li>
+                            <li>
+                                <strong>Ethereum (ETH)</strong>
+                                <span>บล็อกเชนที่ช่วยให้สามารถเขียนโปรแกรม (Smart Contracts) และสร้างแอปพลิเคชันได้</span>
+                            </li>
+                            <li>
+                                <strong>Wallet (กระเป๋าดิจิทัล)</strong>
+                                <span>ที่เก็บคริปโตของคุณ ประกอบด้วย Public Key (ที่อยู่) และ Private Key (รหัสผ่าน)</span>
+                            </li>
+                            <li>
+                                <strong>Private Key (คีย์ส่วนตัว)</strong>
+                                <span>รหัสลับที่ให้คุณควบคุมคริปโต ห้ามบอกให้ใครรู้เด็ดขาด</span>
+                            </li>
+                            <li>
+                                <strong>Public Key (คีย์สาธารณะ)</strong>
+                                <span>ที่อยู่ของกระเป๋าของคุณ สามารถให้ผู้อื่นรู้ได้เพื่อรับเงิน</span>
+                            </li>
+                            <li>
+                                <strong>Exchange (แพลตฟอร์มแลกเปลี่ยน)</strong>
+                                <span>เว็บไซต์ที่ให้คุณซื้อ-ขายคริปโต เช่น Binance TH</span>
+                            </li>
+                            <li>
+                                <strong>Gas Fee (ค่าธรรมเนียมการทำธุรกรรม)</strong>
+                                <span>ค่าที่ต้องจ่ายเพื่อทำให้ธุรกรรมเสร็จสิ้น</span>
+                            </li>
+                            <li>
+                                <strong>Volatility (ความผันผวน)</strong>
+                                <span>ราคาคริปโตเปลี่ยนแปลงอย่างรวดเร็ว สิ่งนี้ทำให้มีความเสี่ยง</span>
+                            </li>
+                            <li>
+                                <strong>HODLing</strong>
+                                <span>การถือคริปโตไว้ยาว ๆ โดยไม่ขายแม้ราคาเปลี่ยนไป</span>
+                            </li>
+                            <li>
+                                <strong>FUD (Fear, Uncertainty, Doubt)</strong>
+                                <span>ความกลัว ความสับสน และความสงสัยที่ทำให้ราคาคริปโตตกลง</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. เหตุใดจึงต้องเข้าใจคริปโต -->
+                    <div class="card-lesson">
+                        <h3>4. เหตุใดจึงต้องเข้าใจคริปโต?</h3>
+                        <ul>
+                            <li><strong>อิสระทางการเงิน:</strong> คุณสามารถเก็บและส่งเงินได้โดยไม่ต้องพึ่งธนาคาร</li>
+                            <li><strong>การแลกเปลี่ยนข้ามประเทศ:</strong> ส่งเงินไปต่างประเทศได้อย่างรวดเร็ว ค่าธรรมเนียมน้อยกว่า</li>
+                            <li><strong>การลงทุน:</strong> คริปโตสามารถเป็นส่วนหนึ่งของพอร์ตโฟลิโอการลงทุน (แต่มีความเสี่ยง)</li>
+                            <li><strong>เทคโนโลยี:</strong> ทำความเข้าใจเทคโนโลยีที่จะเปลี่ยนแปลงอนาคต</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. ความเสี่ยงที่ต้องระวัง -->
+                    <div class="card-lesson">
+                        <h3>5. ความเสี่ยงที่ต้องระวัง</h3>
+                        <ul>
+                            <li><strong>ความผันผวนของราคา:</strong> ราคาคริปโตสูงลง อย่างรวดเร็ว คุณอาจเสียเงินได้ทั้งจำนวน</li>
+                            <li><strong>การถูกแฮก:</strong> ถ้า Private Key ของคุณถูกขโมย ผู้ร้ายจะได้เงินของคุณ</li>
+                            <li><strong>Scam:</strong> มีคนหลายคนใช้คริปโตเพื่อหลอกลวง เช่น ปั้มราคา (Pump and Dump)</li>
+                            <li><strong>การเปลี่ยนแปลงกฎหมาย:</strong> หากรัฐบาลห้ามใช้คริปโต มูลค่าอาจตกลงอย่างมาก</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <strong>⚠️ การลงทุนอย่างฉลาด:</strong> ลงทุนเฉพาะเงินที่สามารถเสียได้ กระจายการลงทุน (Portfolio Diversification) และศึกษาให้ดีก่อนตัดสินใจ
+                        </div>
+                    </div>
+
+                    <!-- Next Lesson -->
+                    <div class="next-lesson">
+                        <h5>🎯 ต่อไป</h5>
+                        <p>เรียนรู้เกี่ยวกับประเภทคริปโตต่างๆ</p>
+                        <a href="types-of-crypto.html">ไปยัง: ประเภทคริปโต →</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <h5>📚 หัวข้อที่เกี่ยวข้อง</h5>
+                        <ul>
+                            <li><a href="types-of-crypto.html"><i class="fas fa-coins"></i> ประเภทคริปโต</a></li>
+                            <li><a href="wallet-security.html"><i class="fas fa-lock"></i> ความปลอดภัยกระเป๋า</a></li>
+                            <li><a href="scam-prevention.html"><i class="fas fa-shield-alt"></i> หลีกเลี่ยงการลวง</a></li>
+                            <li><a href="regulations-thailand.html"><i class="fas fa-gavel"></i> กฎหมายไทย</a></li>
+                            <li><a href="tutorials.html"><i class="fas fa-graduation-cap"></i> คู่มือการใช้งาน</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">พร้อมเริ่มต้นสมัครแล้วหรือยัง?</h2>
+            <p class="lead mb-4">เมื่อคุณเข้าใจพื้นฐานแล้ว ขั้นตอนถัดไปคือการสร้างบัญชีและเรียนรู้วิธีการใช้งาน</p>
+            <a href="types-of-crypto.html" class="btn btn-custom-red btn-lg" style="background-color: #f64548; border-color: #f64548; color: white;">
+                ไปยัง: ประเภทคริปโต
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 border-top">
+        <div class="container text-center">
+            <h5 class="text-brand-blue mb-3">RotiBit</h5>
+
+            <div class="footer-disclaimer mx-auto mt-3 mb-3" style="max-width: 800px;">
+                <strong>คำเตือน:</strong> คริปโทเคอร์เรนซีและโทเคนดิจิทัลมีความเสี่ยงสูง ท่านอาจสูญเสียเงินลงทุนได้ทั้งจำนวน โปรดศึกษาและลงทุนให้เหมาะสมกับระดับความเสี่ยงที่ยอมรับได้
+                เว็บไซต์นี้เป็นเพียงสื่อกลางในการให้ความรู้ ไม่ใช่คำแนะนำการลงทุน
+            </div>
+
+            <a href="#topAnchor" style="color: #1b1464; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 1rem;">
+                <i class="fas fa-arrow-up"></i> กลับไปด้านบน
+            </a>
+
+            <p class="mb-0 text-muted small">&copy; 2026 RotiBit. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

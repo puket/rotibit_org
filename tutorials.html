@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คู่มือการใช้งาน - RotiBit</title>
+    <link rel="icon" type="image/png" href="assets/ico/fav.png">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: Prompt สำหรับภาษาไทยให้อ่านง่ายและดูทันสมัย -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333333;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .text-brand-blue {
+            color: #1b1464;
+            font-weight: 700;
+        }
+
+        .bg-primary h1 {
+            color: white !important;
+        }
+
+        .content-section {
+            background-color: #ffffff;
+            padding: 60px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-card {
+            background-color: #f8f9fa;
+            border-left: 4px solid #1b1464;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .step-card h4 {
+            color: #1b1464;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .step-number {
+            background-color: #f64548;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step-card p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .step-card ul {
+            margin-left: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .step-card li {
+            margin-bottom: 0.7rem;
+            line-height: 1.6;
+        }
+
+        .tutorial-section {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tutorial-section h3 {
+            color: #1b1464;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+
+        .highlight-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .footer-disclaimer {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+        .nav-links {
+            background-color: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            background-color: #1b1464;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #f64548;
+            transform: translateY(-2px);
+        }
+
+        .screenshot-mockup {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .screenshot-mockup.login {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .screenshot-mockup.kyc {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .screenshot-mockup.deposit {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .screenshot-mockup.trading {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .screenshot-mockup i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .step-card .screenshot-mockup {
+            margin: 1.5rem 0;
+            min-height: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-brand-blue" href="index.html" id="topAnchor"><img src="assets/img/logo.png" alt="RotiBit - แหล่งเรียนรู้คริปโตสำหรับคนไทย" height="70"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crypto101.html">Crypto 101</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tutorials.html">คู่มือการใช้งาน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="disclaimer.html">ข้อสงวนสิทธิ์</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 mb-3">คู่มือการใช้งาน: เริ่มต้นกับ Binance TH</h1>
+            <p class="lead">คำแนะนำแบบทีละขั้นตอน (Step-by-step) สำหรับการสมัคร ยืนยันตัวตน และการทำธุรกรรม</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="text-center mb-5">
+                        <img src="assets/binance-th/binance-th.png" alt="Binance TH" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+
+                    <!-- Table of Contents -->
+                    <div class="alert alert-info mb-4">
+                        <h5 class="alert-heading">📑 เนื้อหาในหน้านี้:</h5>
+                        <ul class="mb-0">
+                            <li><a href="#step1" class="alert-link">1. วิธีสมัครบัญชี</a></li>
+                            <li><a href="#step2" class="alert-link">2. ยืนยันตัวตน (KYC)</a></li>
+                            <li><a href="#step3" class="alert-link">3. ตั้งค่าความปลอดภัย</a></li>
+                            <li><a href="#step4" class="alert-link">4. ฝากเงิน</a></li>
+                            <li><a href="#step5" class="alert-link">5. ซื้อคริปโต</a></li>
+                            <li><a href="#step6" class="alert-link">6. ถอนเงิน</a></li>
+                            <li><a href="#safety" class="alert-link">7. ข้อควรระวัง</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Step 1: สมัครบัญชี -->
+                    <div id="step1" class="tutorial-section">
+                        <h3><i class="fas fa-user-plus" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">1</span> วิธีสมัครบัญชี Binance TH</h3>
+                        <p>ขั้นตอนแรกคือการสร้างบัญชี Binance TH ที่ได้รับอนุญาตอย่างถูกต้องในประเทศไทย</p>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">1.1</span>เข้าไปที่เว็บไซต์ Binance TH</h4>
+                            <p>ไปที่ <strong>binance.th</strong> หรือคลิกลิงก์สมัครในหน้านี้</p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">1.2</span>กรอกข้อมูลการสมัครสมาชิก</h4>
+                            <ul>
+                                <li>กรอก <strong>Email</strong> ที่ใช้งานจริง (จะเป็นชื่อผู้ใช้ของคุณ)</li>
+                                <li>สร้าง <strong>รหัสผ่าน</strong> ที่ปลอดภัย (ตัวใหญ่+ตัวเล็ก+ตัวเลข+สัญลักษณ์)</li>
+                                <li>ยืนยันบัญชีของคุณผ่านอีเมล (ตรวจสอบ Inbox)</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">1.3</span>ยืนยันอีเมล</h4>
+                            <p>Binance จะส่ง Link ยืนยันถึงอีเมลของคุณ คลิกเพื่อยืนยันบัญชี</p>
+                            <div class="highlight-box">
+                                <strong>💡 เคล็ดลับ:</strong> ตรวจสอบ Spam folder ถ้าไม่เห็นในหนังสือหลัก
+                            </div>
+                        </div>
+
+                        <div class="screenshot-mockup login">
+                            <div>
+                                <i class="fas fa-mobile-alt"></i>
+                                <h5>หน้า Login</h5>
+                                <p>กรอก Email และรหัสผ่าน แล้วคลิก Sign In</p>
+                            </div>
+                        </div>
+
+                        <div class="success-box">
+                            <strong>✅ เสร็จสิ้น:</strong> บัญชีของคุณได้รับการสร้าง สามารถล็อกอินได้แล้ว
+                        </div>
+                    </div>
+
+                    <!-- Step 2: KYC -->
+                    <div id="step2" class="tutorial-section">
+                        <h3><i class="fas fa-id-card" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">2</span> ยืนยันตัวตน (KYC - Know Your Customer)</h3>
+                        <p>เพื่อให้ปลอดภัยและปฏิบัติตามกฎหมาย Binance ต้องการข้อมูลตัวตนของคุณ</p>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">2.1</span>เตรียมเอกสาร</h4>
+                            <ul>
+                                <li><strong>บัตรประชาชน</strong> (หรือพาสปอร์ต) - ต้องไม่หมดอายุ</li>
+                                <li>ถ่ายรูปบัตรทั้งด้านหน้าและด้านหลัง</li>
+                                <li>ถ่ายรูปตนเองถือบัตรประชาชน (ชัดเจนและอ่านได้)</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">2.2</span>เข้าไปหน้า Verification</h4>
+                            <p>ในบัญชี Binance ของคุณ ไปที่ <strong>Account → Verification</strong></p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">2.3</span>กรอกข้อมูลส่วนบุคคล</h4>
+                            <ul>
+                                <li>ชื่อ-นามสกุล (ต้องตรงกับบัตรประชาชน)</li>
+                                <li>วันเดือนปีเกิด</li>
+                                <li>ประเทศสัญชาติ (ไทย)</li>
+                                <li>ที่อยู่ที่อยู่อาศัยในปัจจุบัน</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">2.4</span>อัปโหลดไฟล์</h4>
+                            <ul>
+                                <li>อัปโหลดภาพบัตรประชาชนด้านหน้า</li>
+                                <li>อัปโหลดภาพบัตรประชาชนด้านหลัง</li>
+                                <li>ถ่ายรูป Selfie ถือบัตรประชาชน (ต้องเห็นหน้า+บัตร+มือ)</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">2.5</span>รอการอนุมัติ</h4>
+                            <p>Binance จะตรวจสอบข้อมูลของคุณ โดยทั่วไปใช้เวลา <strong>1-3 วัน ทำการ</strong></p>
+                            <div class="highlight-box">
+                                <strong>⏱️ รอสักครู่:</strong> หากไม่อนุมัติ Binance จะแจ้งเหตุผลให้ทราบ อาจต้องอัปโหลดซ้ำ
+                            </div>
+                        </div>
+
+                        <div class="screenshot-mockup kyc">
+                            <div>
+                                <i class="fas fa-camera"></i>
+                                <h5>หน้า Verification</h5>
+                                <p>อัปโหลดบัตรประชาชน และรูป Selfie</p>
+                            </div>
+                        </div>
+
+                        <div class="success-box">
+                            <strong>✅ เสร็จสิ้น:</strong> บัญชียืนยันแล้ว! สามารถทำธุรกรรมได้
+                        </div>
+                    </div>
+
+                    <!-- Step 3: ความปลอดภัย -->
+                    <div id="step3" class="tutorial-section">
+                        <h3><i class="fas fa-lock" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">3</span> ตั้งค่าความปลอดภัย (2FA)</h3>
+                        <p>เพื่อปกป้องบัญชีของคุณจากการโจรกรรม ต้องเปิด 2-Factor Authentication (2FA)</p>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">3.1</span>ติดตั้งแอปสร้างโค้ด</h4>
+                            <ul>
+                                <li>ดาวน์โหลด <strong>Google Authenticator</strong> หรือ <strong>Authy</strong> (ฟรีในทั้ง iOS และ Android)</li>
+                                <li>ติดตั้งแอปในโทรศัพท์ของคุณ</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">3.2</span>เปิด 2FA ใน Binance</h4>
+                            <p>ไปที่ <strong>Account → Security → 2FA</strong> คลิก "Enable"</p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">3.3</span>สแกน QR Code</h4>
+                            <ul>
+                                <li>ใช้ Google Authenticator สแกน QR Code ที่ Binance แสดง</li>
+                                <li>แอปจะสร้างโค้ด 6 หลักแบบอัตโนมัติทุก 30 วินาที</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">3.4</span>บันทึก Backup Code</h4>
+                            <p>Binance จะให้ <strong>Backup Codes</strong> มา บันทึกไว้ที่ปลอดภัย (ถ้าสูญหายโทรศัพท์ใช้เพื่อกู้คืน)</p>
+                            <div class="highlight-box">
+                                <strong>⚠️ สำคัญมาก:</strong> เก็บ Backup Codes ไว้ในที่ปลอดภัย ห้ามบอกใครเด็ดขาด
+                            </div>
+                        </div>
+
+                        <div class="screenshot-mockup login">
+                            <div>
+                                <i class="fas fa-barcode"></i>
+                                <h5>หน้า 2FA Setup</h5>
+                                <p>สแกน QR Code ด้วย Google Authenticator</p>
+                            </div>
+                        </div>
+
+                        <div class="success-box">
+                            <strong>✅ เสร็จสิ้น:</strong> บัญชีปลอดภัยแล้ว!
+                        </div>
+                    </div>
+
+                    <!-- Step 4: ฝากเงิน -->
+                    <div id="step4" class="tutorial-section">
+                        <h3><i class="fas fa-money-bill-wave" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">4</span> ฝากเงิน (Deposit)</h3>
+                        <p>วิธีการฝากเงินบาท (THB) เข้าบัญชี Binance</p>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">4.1</span>ไปหน้า Wallet</h4>
+                            <p>ในบัญชี Binance ไปที่ <strong>Wallet → Fiat and Spot</strong></p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">4.2</span>เลือก "Deposit"</h4>
+                            <p>คลิกปุ่ม "Deposit" แล้วเลือก <strong>Thailand Baht (THB)</strong></p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">4.3</span>เลือกวิธีการ</h4>
+                            <ul>
+                                <li><strong>Bank Transfer:</strong> โอนเงินจากบัญชีธนาคารของคุณ</li>
+                                <li><strong>e-Wallet:</strong> ผ่านพromptpay, True Money Wallet เป็นต้น</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">4.4</span>กรอกจำนวนเงิน</h4>
+                            <p>ป้อนจำนวนเงินที่ต้องการฝาก แล้วคลิก "Next"</p>
+                            <div class="highlight-box">
+                                <strong>💰 ข้อมูล:</strong> ค่าธรรมเนียมอาจแตกต่างกันไป ตรวจสอบก่อนยืนยัน
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">4.5</span>โอนเงินและรอตรวจสอบ</h4>
+                            <p>Binance จะบอกหมายเลขบัญชีหรือ QR Code สำหรับโอนเงิน ทำการโอนตามที่ระบุ</p>
+                            <p>เงินจะเข้าบัญชี Binance ภายใน <strong>10 นาที ถึง 1 วัน ทำการ</strong> ขึ้นอยู่ับธนาคาร</p>
+                        </div>
+
+                        <div class="screenshot-mockup deposit">
+                            <div>
+                                <i class="fas fa-piggy-bank"></i>
+                                <h5>หน้า Deposit</h5>
+                                <p>ตรวจสอบบัญชีธนาคารและจำนวนเงิน</p>
+                            </div>
+                        </div>
+
+                        <div class="success-box">
+                            <strong>✅ เสร็จสิ้น:</strong> เงินของคุณอยู่ใน Binance แล้ว!
+                        </div>
+                    </div>
+
+                    <!-- Step 5: ซื้อคริปโต -->
+                    <div id="step5" class="tutorial-section">
+                        <h3><i class="fab fa-bitcoin" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">5</span> ซื้อคริปโต</h3>
+                        <p>หลังจากมีเงินในบัญชี สามารถซื้อคริปโตได้</p>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">5.1</span>ไปหน้า Buy Crypto</h4>
+                            <p>คลิก <strong>"Buy Crypto"</strong> หรือ <strong>"Trade"</strong> ในเมนู</p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">5.2</span>เลือกคริปโต</h4>
+                            <ul>
+                                <li>เลือก Bitcoin (BTC) หรือ Ethereum (ETH) สำหรับมือใหม่</li>
+                                <li>บางคนเลือกคริปโตอื่น ๆ แต่ควรจะศึกษาก่อน</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">5.3</span>ป้อนจำนวน</h4>
+                            <p>ป้อนจำนวนเงินไทยบาท (THB) หรือจำนวนคริปโตที่ต้องการ</p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">5.4</span>ตรวจสอบและยืนยัน</h4>
+                            <p>ตรวจสอบ:</p>
+                            <ul>
+                                <li>จำนวนคริปโตที่จะได้รับ</li>
+                                <li>ค่าธรรมเนียม</li>
+                                <li>ราคาปัจจุบัน</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">5.5</span>ส่วนคริปโต</h4>
+                            <p>คลิก "Confirm" และใส่โค้ด 2FA (จาก Google Authenticator)</p>
+                            <p>เสร็จสิ้น! คริปโตของคุณอยู่ในกระเป๋าแล้ว</p>
+                        </div>
+
+                        <div class="screenshot-mockup trading">
+                            <div>
+                                <i class="fas fa-chart-line"></i>
+                                <h5>หน้า Trading</h5>
+                                <p>เลือกคริปโต ป้อนจำนวน และยืนยัน</p>
+                            </div>
+                        </div>
+
+                        <div class="success-box">
+                            <strong>✅ เสร็จสิ้น:</strong> คุณเป็นเจ้าของคริปโตแล้ว!
+                        </div>
+                    </div>
+
+                    <!-- Step 6: ถอนเงิน -->
+                    <div id="step6" class="tutorial-section">
+                        <h3><i class="fas fa-wallet" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">6</span> ถอนเงิน (Withdrawal)</h3>
+                        <p>วิธีการถอนเงินหรือคริปโตออกจาก Binance</p>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">6.1</span>ไปหน้า Withdraw</h4>
+                            <p>ไปที่ <strong>Wallet → Fiat and Spot → Withdraw</strong></p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">6.2</span>เลือกวิธีการถอน</h4>
+                            <ul>
+                                <li><strong>Bank Transfer:</strong> โอนเงินกลับเข้าบัญชีธนาคารของคุณ</li>
+                                <li><strong>Withdraw Crypto:</strong> ถ่ายโอนคริปโตไปยังกระเป๋า (Wallet) อื่น</li>
+                            </ul>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">6.3</span>กรอกข้อมูล</h4>
+                            <p>กรอกข้อมูลธนาคารของคุณหรือที่อยู่กระเป๋าคริปโต</p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">6.4</span>ยืนยัน 2FA</h4>
+                            <p>ใส่โค้ด 2FA เพื่อยืนยัน</p>
+                        </div>
+
+                        <div class="step-card">
+                            <h4><span class="step-number" style="width: 30px; height: 30px; font-size: 0.9rem;">6.5</span>รอการประมวลผล</h4>
+                            <p>เงินจะออกจาก Binance ภายใน <strong>1-3 วันทำการ</strong> ขึ้นอยู่กับธนาคาร</p>
+                        </div>
+
+                        <div class="screenshot-mockup deposit">
+                            <div>
+                                <i class="fas fa-money-check-alt"></i>
+                                <h5>หน้า Withdrawal</h5>
+                                <p>ใส่ข้อมูลธนาคารและจำนวนเงิน</p>
+                            </div>
+                        </div>
+
+                        <div class="success-box">
+                            <strong>✅ เสร็จสิ้น:</strong> เงินของคุณถูกถอนออก!
+                        </div>
+                    </div>
+
+                    <!-- Step 7: ข้อควรระวัง -->
+                    <div id="safety" class="tutorial-section">
+                        <h3><i class="fas fa-shield-alt" style="color: #f64548; margin-right: 1rem;"></i><span class="step-number">7</span> ข้อควรระวัง และเคล็ดลับความปลอดภัย</h3>
+
+                        <div class="screenshot-mockup login">
+                            <div>
+                                <i class="fas fa-user-shield"></i>
+                                <h5>ความปลอดภัยที่ส่วนใจ</h5>
+                                <p>ใช้ 2FA, รหัสผ่านแข็งแรง, ตรวจสอบ URL ก่อนล็อกอิน</p>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning">
+                            <h5 class="alert-heading">⚠️ ความปลอดภัยอันดับหนึ่ง</h5>
+                            <ul class="mb-0">
+                                <li><strong>ห้ามบอกรหัสผ่าน</strong> - Binance จะไม่เคยขอรหัสผ่านของคุณ</li>
+                                <li><strong>ห้ามเปิดลิงก์ที่สงสัย</strong> - อาจเป็น Phishing ที่จะขโมยข้อมูลของคุณ</li>
+                                <li><strong>ห้ามแนะนำ Private Key</strong> - ใครก็ตามที่มี Private Key สามารถเข้าไปได้ทั้งหมด</li>
+                                <li><strong>เปิด 2FA เสมอ</strong> - ป้องกันการเข้าไปโดยไม่ได้รับอนุญาต</li>
+                            </ul>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <h5 class="alert-heading">💡 เคล็ดลับ</h5>
+                            <ul class="mb-0">
+                                <li><strong>ใช้รหัสผ่านที่แข็งแรง</strong> - ตัวใหญ่ + ตัวเล็ก + ตัวเลข + สัญลักษณ์</li>
+                                <li><strong>ตรวจสอบ URL</strong> - ตรวจสอบให้แน่ใจว่า URL คือ <strong>binance.th</strong></li>
+                                <li><strong>ใช้ VPN หากจำเป็น</strong> - เมื่อใช้ WiFi สาธารณะ</li>
+                                <li><strong>อัปเดต Software</strong> - เก็บ Operating System และแอปเป็นเวอร์ชันล่าสุด</li>
+                                <li><strong>เก็บ Backup Code</strong> - เก็บ Backup Code ของ 2FA ในที่ปลอดภัย</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">พร้อมเริ่มต้นสมัครแล้ว?</h2>
+            <p class="lead mb-4">ทำตามขั้นตอนข้างต้นแล้ว คุณจะพร้อมเข้าสู่โลกคริปโตแล้ว</p>
+            <a href="https://accounts.binance.th/en/register?ref=DM31HQUD" target="_blank" class="btn" style="background-color: #f64548; border-color: #f64548; color: white; padding: 12px 30px; font-weight: 600;">
+                สมัครกับ Binance TH
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4 border-top">
+        <div class="container text-center">
+            <h5 class="text-brand-blue mb-3">RotiBit</h5>
+
+            <div class="footer-disclaimer mx-auto mt-3 mb-3" style="max-width: 800px;">
+                <strong>คำเตือน:</strong> คริปโทเคอร์เรนซีและโทเคนดิจิทัลมีความเสี่ยงสูง ท่านอาจสูญเสียเงินลงทุนได้ทั้งจำนวน โปรดศึกษาและลงทุนให้เหมาะสมกับระดับความเสี่ยงที่ยอมรับได้
+                เว็บไซต์นี้เป็นเพียงสื่อกลางในการให้ความรู้ ไม่ใช่คำแนะนำการลงทุน
+            </div>
+
+            <a href="#topAnchor" style="color: #1b1464; text-decoration: none; font-weight: 600; display: inline-block; margin-bottom: 1rem;">
+                <i class="fas fa-arrow-up"></i> กลับไปด้านบน
+            </a>
+
+            <p class="mb-0 text-muted small">&copy; 2026 RotiBit. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
